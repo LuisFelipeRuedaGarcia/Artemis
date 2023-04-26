@@ -6,9 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="./js/main.js" defer></script>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    
+    <section>
+        <div class="hero">
+            <div class="contenido-hero">
+                <h2>DEVS UNIVERSITY</h2>
+                <p>Nort Caroline</p>
+                <a href="#">Contactar</a>
+            </div>
+        </div>
+    </section>
+    <header class="heading">
+        <h1>estudiantes</h1>
+    </header>
+    <table>
+        <thead>
+            <tr >
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Carrera</th>
+                <th>Sexo</th>
+                <th>Jornada</th>
+                <th>Detalle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr >
+                <th>1005107983</th>
+                <th>Luis Felipe Rueda García</th>
+                <th>TECNOLOGÍA EN DESARROLLO DE SISTEMAS INFORMATICOS</th>
+                <th>M</th>
+                <th>NOCTURNA</th>
+                <th><button class="btn btn-primary">Detalle</button></th>
+            </tr>
+        </tbody>
+    </table>
+
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#miModal">Details</button>
+    <div class="modal fade" id="miModal${count}" tabindex="-1" aria-hidden="true" aria-labelledby="modalTitle">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-tittle" id="modalTitle">Information ${launches[i].mission_name}</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <ul class="list-group list-group-flush">
+                <li class="list-group-item">mission Name: <span>${launches[i].mission_name}</span></li>
+                <li class="list-group-item">Rocket Name: <span>${launches[i].rocket.rocket_name}</span></li>
+                <li class="list-group-item">Rocket Type: <span>${launches[i].rocket.rocket_type}</span></li>
+                <li class="list-group-item">launch Success:  <span>${launches[i].launch_success}</span></li>
+              </ul>
+              <div class="modal-footer">
+              <button type="button" class="btn btn-secondary"data-bs-dismiss="modal"> Cerrar</button>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#miModal${count}v">video</button>
+          </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
