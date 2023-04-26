@@ -1,1 +1,61 @@
-/**/
+body {
+    background-color: black !important;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+header img{
+    width: 600px;
+}
+.card{
+    background-color: white;
+    border: solid white;
+    border-radius: 10px;
+    margin:2rem;
+    width: 24rem;
+}
+.card img{
+    width: 100%;
+    border-radius: 10px;
+    
+}
+main > div{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+
+.card-body{
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    margin: auto;
+    align-items: center;
+}
+.card-footer{
+    width: 200%;
+    display: flex;
+    justify-content: space-evenly
+}
+.btn-close{
+
+    background-color: white !important;
+}
+li {
+    background-color: black !important;
+    color: white !important;
+    display: flex!important;
+    justify-content: space-between !important;
+}
+li span{
+    color: blue;
+}
+
+.modal-body , .modal-header{
+    background-color: black !important;
+    color:blue;
+    text-align: center !important;
+
+}
