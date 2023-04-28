@@ -1,1 +1,28 @@
 /**/
+body{
+    background-color: lightslategray;
+}
+header {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url("../images/wallpaper.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 15rem;
+    position: relative;
+} 
+h1{
+    color: white;
+    margin: 3rem;
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(251, 249, 249);
+    background-color: rgb(0 0 0 /68%);
+}
