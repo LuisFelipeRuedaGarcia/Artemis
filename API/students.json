@@ -1,0 +1,18 @@
+[
+    {
+      "id_usuario": "2",
+      "cedula": "1005108573",
+      "nombre": "JAHIR ESTEBANOCHOA ",
+      "programa": "TECNOLOGIA EN OPERACION Y MANTENIMIENTO ELECTROMECANICO",
+      "sexo": "M",
+      "jornada": "NOCTURNA"
+    },
+    {
+      "id_usuario": "3",
+      "cedula": "1005108582",
+      "nombre": "BRAYAN SNEYDERMARTINEZ ",
+      "programa": "TECNOLOGIA EN DESARROLLO DE SISTEMAS INFORMATICOS",
+      "sexo": "M",
+      "jornada": "DIURNA"
+    }
+]
