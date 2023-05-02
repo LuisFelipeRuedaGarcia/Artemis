@@ -1,4 +1,8 @@
 /**/
+*{
+    margin: 0;
+}
+
 body{
     background-color: lightslategray;
 }
@@ -12,7 +16,8 @@ header {
     background-size: cover;
     height: 15rem;
     position: relative;
-} 
+}
+
 h1{
     color: white;
     margin: 3rem;
@@ -25,4 +30,14 @@ h1{
     align-items: center;
     color: rgb(251, 249, 249);
     background-color: rgb(0 0 0 /68%);
+}
+
+.oculto , .oculto2{
+    display: none
+}
+.mostar{
+    display: inline-block;
+}
+table, td, th, tr{
+    border:solid 1px
 }

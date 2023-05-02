@@ -13,16 +13,104 @@
         <h1>CRIPTOMONEDAS <br> TRADING</h1>
     </header>
     <main>
-        Elige tu moneda local
-        <select name="Moneda" id="Moneda">
+<section id="forms">
+    Elige tu moneda local
+    <select name="Moneda" id="Moneda">
+        <option value="Seleccionar">Seleccionar</option>
+    </select>
+    <br>
+    Elige la criptomoneda
+    <select name="cripto" id="cripto">
+        <option value="Seleccionar">Seleccionar</option>
+    </select>
+    <br>
+    <div class="oculto">
+        un <span id ="criptoElegido"></span> vale <span id="valor">
+        </span>
+        dos <span id ="criptoElegido"></span> vale <span id="valor">
+        </span>
+    </div>
+    <br>
+    <div class="oculto2">
 
-        </select>
-        <br>
-        Elige la criptomoneda
-        <select name="cripto" id="cripto">
+        <span id="cantidadElegida"></span> <span id ="criptoElegido2"></span> equivale a <span id="valor2">
+        </span>
+    </div>
+    <br>
+    cuántas cripto desea comprar?
+    <input type="number" id="cantidad">
+    <br>
+    <button id="comprar">Cromprar</button>
+</section>
+<fieldset>
+    <legend>Mis Historial de compras</legend>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    MONEDA LOCAL
+                </th>
+                <th>
+                    CRIPTOMONEDA
+                </th>
+                <th>
+                    PRECIO CRIPTOMONEDA
+                </th>
+                <th>
+                    CANTIDAD COMPRADA
+                </th>
+                <th>
+                    VALOR TRANSACCIÓN
+                </th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+    </table>
+</fieldset>
 
-        </select>
-        <br>
+<h3>vender</h3>
+
+Nuevos precios
+<table>
+    <thead>
+            <tr>
+                <th>
+                    MONEDA LOCAL
+                </th>
+                <th>
+                    CRIPTOMONEDA
+                </th>
+                <th>
+                    CAMBIO PRECIO
+                </th>
+                <th>
+                    CANTIDAD A VENDER
+                </th>
+            </tr>
+        </thead>
+        <tbody id="tbody2">
+        </tbody>
+    </table>
+    <button id="vender">vender</button>
+
+<table>
+    <thead>
+        <tr>
+            <th colspan="2">
+                ganacias
+            </th>
+            <th colspan="2">
+                pérdidas
+            </th>
+        </tr>
+    </thead>
+    <tbody id="tbody3">
+
+
+    </tbody>
+</table>
+
       <!--   <b>
              BTC a
         </b>
