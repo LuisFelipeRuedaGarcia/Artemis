@@ -24,11 +24,13 @@ const btccop = async () => {
 btccop(); */
 
 
-let selectorMoneda = document.querySelector("#Moneda")
-let selectorCripto = document.querySelector("#cripto")
-let selectorCantidad = document.querySelector("#cantidad")
-let oculto = document.querySelector(".oculto")
-let oculto2 = document.querySelector(".oculto2")
+let selectorMoneda = document.querySelector("#elegirMoneda");
+let selectorCripto = document.querySelector("#elegirCripto");
+let selectorCantidadCripto = document.querySelector("#elegirCantidadCripto");
+let selectorCantidadMoneda =document.querySelector("#elegirCantidadMoneda");
+
+let oculto = document.querySelector(".oculto");
+let oculto2 = document.querySelector(".oculto2");
 let criptosMasPopulares
 const fectSelectCripto = async () => {
     const url = 'https://min-api.cryptocompare.com/data/top/totalvolfull?limit=10&tsym=USD';
@@ -71,9 +73,13 @@ let monedasFiduciarias =[
 insertarOptions(monedasFiduciarias, selectorMoneda)
 
 let MonedaSeleccionada /* = monedasFiduciarias[0].CoinInfo.Name // en caso de que no se seleccione una moneda, el selector mostrará por defecto "dólar estadounidense", por tanto se le asiga ese valor a la varaible también por defecto para que la operación se efectue con ese valor */
+let count = 0
 selectorMoneda.addEventListener("input", (e)=>{
-    console.log(e.target.value)
     MonedaSeleccionada = e.target.value
+    if(count!=0){asignarvaloractual();
+        spans();}
+
+    count++
 })
 
 let criptoseleccionado 
@@ -84,11 +90,11 @@ selectorCripto.addEventListener("input", (e)=>{
  let valorDelaConversion
 async function asignarvaloractual(){
     const url = `https://min-api.cryptocompare.com/data/price?fsym=${criptoseleccionado}&tsyms=${MonedaSeleccionada}`;
-    console.log(url)
+
     try {
         const respuesta = await fetch(url);
     let resultado = await respuesta.json();
-    console.log(resultado);
+
     valorDelaConversion=resultado[`${MonedaSeleccionada}`];
     mostrarConversion();
     }
@@ -97,27 +103,50 @@ async function asignarvaloractual(){
     }
 }
 function mostrarConversion(){
-    oculto.style.display = "block"
-    let spanNombre = document.querySelector("#criptoElegido")
-    spanNombre.textContent =`${criptoseleccionado}`
-    let SpanValor = document.querySelector("#valor")
-    SpanValor.textContent = `${valorDelaConversion} ${MonedaSeleccionada}s`
+    oculto.style.display = "block";
+    spans();
+    
 }
-let cantidadSeleccionada
+
+function spans(){
+    let SpansMonedaElegida =document.querySelectorAll(".monedaElegida");
+    let spansCriptoElegido =document.querySelectorAll(".criptoElegido");
+    let spansCantidadElegida= document.querySelectorAll(".cantidadElegida");
+    let spansValorConversion = document.querySelectorAll(".valorConversion");
+    let spanValorConversionTotal = document.querySelectorAll(".valorConversionTotal");
+    for (let i = 0; i < SpansMonedaElegida.length; i++){
+
+        spansCriptoElegido[i].textContent =`${criptoseleccionado}`
+        SpansMonedaElegida[i].textContent = `${MonedaSeleccionada}`
+    }
+
+    spansCantidadElegida[0].textContent =`${cantidadCriptoSeleccionada}`;
+    spansValorConversion[0].textContent = `${valorDelaConversion}`;
+    spanValorConversionTotal[0].textContent = `${valorTotal}`;
+}
+let cantidadCriptoSeleccionada
 let valorTotal
-selectorCantidad.addEventListener("change", (e)=>{
-    cantidadSeleccionada = e.target.value
-    valorTotal = (cantidadSeleccionada*valorDelaConversion)
+selectorCantidadCripto.addEventListener("input", (e)=>{
+    cantidadCriptoSeleccionada = e.target.value
+    valorTotal = (cantidadCriptoSeleccionada*valorDelaConversion)
+
+    selectorCantidadMoneda.value = (selectorCantidadCripto.value*valorDelaConversion);
+
+})
+let cantidadMonedaSeleccionada
+selectorCantidadMoneda.addEventListener("input", (e)=>{
+
+    cantidadMonedaSeleccionada = e.target.value
+     valorTotal = cantidadMonedaSeleccionada 
+     cantidadCriptoSeleccionada = (cantidadMonedaSeleccionada/valorDelaConversion)
+
+     selectorCantidadCripto.value = (cantidadMonedaSeleccionada/valorDelaConversion) 
     mostrarConversionTotal();
 })
+
 function mostrarConversionTotal(){
     oculto2.style.display = "block"
-    let SpanCantidad = document.querySelector("#cantidadElegida")
-    SpanCantidad.textContent =`${cantidadSeleccionada}`
-    let spanNombre2 = document.querySelector("#criptoElegido2")
-    spanNombre2.textContent =`${criptoseleccionado}s`
-    let SpanValor2 = document.querySelector("#valor2")
-    SpanValor2.textContent = `${valorDelaConversion} ${MonedaSeleccionada}s`
+spans();
 }
 
 let RegistroOperaciones = []
@@ -126,7 +155,7 @@ function añadirRegistro(){
         MonedaSeleccionada: MonedaSeleccionada,
         criptoseleccionado: criptoseleccionado,
         valorDelaConversion: valorDelaConversion,
-        cantidadSeleccionada: cantidadSeleccionada,
+        cantidadCriptoSeleccionada: cantidadCriptoSeleccionada,
         valorTotal: valorTotal
     })
     console.log(RegistroOperaciones);
@@ -155,7 +184,7 @@ function Tabla(){
             ${RegistroOperaciones[i].valorDelaConversion}
         </td>
         <td>
-            ${RegistroOperaciones[i].cantidadSeleccionada}
+            ${RegistroOperaciones[i].cantidadCriptoSeleccionada}
         </td>
         <td>
             ${RegistroOperaciones[i].valorTotal}
@@ -174,7 +203,7 @@ function Tabla(){
             <input type="number" min="0" id="cambiarValor${i+1}">
         </td>
         <td>
-            <input type="number" min="0" max="${RegistroOperaciones[i].cantidadSeleccionada}" id="ElegirCantidad${i+1}">
+            <input type="number" min="0" max="${RegistroOperaciones[i].cantidadCriptoSeleccionada}" id="ElegirCantidad${i+1}">
         </td>
     </tr>`);
     let nombreInputPrecio = "inputPrecio"+(i+1);
@@ -184,7 +213,8 @@ function Tabla(){
  
     let nombreInputCantidad = "inputCantidad"+(i+1);
     inputsCantidad[nombreInputCantidad] = document.querySelector(`#ElegirCantidad${i+1}`);
-    inputsCantidad[nombreInputCantidad].value = RegistroOperaciones[i].cantidadSeleccionada; 
+    inputsCantidad[nombreInputCantidad].value = RegistroOperaciones[i].cantidadCriptoSeleccionada;
+
 
     }
 }
@@ -206,48 +236,48 @@ buttonVenta.addEventListener("click", ()=>{
     console.log(valor);
     Tabla(); */
 });
-let tbody3 = document.querySelector("#tbody3");
+let tbody3g = document.querySelector("#tbody3g");
+let tbody3p = document.querySelector("#tbody3p");
 function ganaciasPerdidas(){
     for (let i = 0; i < RegistroOperaciones.length; i++) {
         console.log(RegistroOperaciones[i]);
         let nombreInputCantidad = "inputCantidad"+(i+1);
         let nombreInputPrecio = "inputPrecio"+(i+1);
-        let NuevoValorTotal = (inputsCantidad[nombreInputCantidad].value * inputsPrecio[nombreInputPrecio].value)
-         if (NuevoValorTotal > RegistroOperaciones[i].valorTotal){
-            tbody3.insertAdjacentHTML("beforeend", `
+        let NuevoValorCripto = inputsPrecio[nombreInputPrecio].value
+        let CantidadAVender = inputsCantidad[nombreInputCantidad].value
+        /* let ValorVentaTotal = (inputsCantidad[nombreInputCantidad].value * inputsPrecio[nombreInputPrecio].value) */
+         if (NuevoValorCripto > RegistroOperaciones[i].valorDelaConversion){
+            tbody3g.insertAdjacentHTML("beforeend", `
             <tr>
                 <td>
                     ${RegistroOperaciones[i].criptoseleccionado}
                 </td>
                 <td>
-                    ${NuevoValorTotal-RegistroOperaciones[i].valorTotal}
-                </td>
-
-                <td>    
-                </td>
-
-                <td>
+                    +${(NuevoValorCripto-RegistroOperaciones[i].valorDelaConversion)*CantidadAVender}${RegistroOperaciones[i].MonedaSeleccionada}s
                 </td>
             </tr>
 `)
          }
-         else if (NuevoValorTotal < RegistroOperaciones[i].valorTotal){
-            tbody3.insertAdjacentHTML("beforeend", `
+         else if (NuevoValorCripto < RegistroOperaciones[i].valorDelaConversion){
+            tbody3p.insertAdjacentHTML("beforeend", `
             <tr>
-                <td>
-                </td>
-
-                <td>
-                </td>
-
                 <td>
                 ${RegistroOperaciones[i].criptoseleccionado}    
                 </td>
                 <td>
-                ${NuevoValorTotal-RegistroOperaciones[i].valorTotal}
+                -${(RegistroOperaciones[i].valorDelaConversion-NuevoValorCripto)*CantidadAVender}${RegistroOperaciones[i].MonedaSeleccionada}s
                 </td>
             </tr>
             `)
          }
+         RegistroOperaciones[i].cantidadCriptoSeleccionada-=inputsCantidad[nombreInputCantidad].value
+         if (RegistroOperaciones[i].cantidadCriptoSeleccionada == 0){
+            RegistroOperaciones.splice(i, 1);
+         }else{
+
+         inputsPrecio[nombreInputPrecio].value = RegistroOperaciones[i].valorDelaConversion
+ 
+         inputsCantidad[nombreInputCantidad].value = RegistroOperaciones[i].cantidadCriptoSeleccionada;}
+        Tabla();
     }
 }

@@ -15,32 +15,33 @@
     <main>
 <section id="forms">
     Elige tu moneda local
-    <select name="Moneda" id="Moneda">
+    <select name="Moneda" id="elegirMoneda">
         <option value="Seleccionar">Seleccionar</option>
     </select>
     <br>
     Elige la criptomoneda
-    <select name="cripto" id="cripto">
+    <select name="cripto" id="elegirCripto">
         <option value="Seleccionar">Seleccionar</option>
     </select>
     <br>
     <div class="oculto">
-        un <span id ="criptoElegido"></span> vale <span id="valor">
-        </span>
-        dos <span id ="criptoElegido"></span> vale <span id="valor">
-        </span>
-    </div>
+        un <span class="criptoElegido" ></span> vale <span class="valorConversion"></span><span class="monedaElegida">
+        </span>s
+        <br>
+    cuántos <span  class="criptoElegido" ></span> desea comprar?
+    <input type="number" id="elegirCantidadCripto">
+    <br>
+    cuántos <span class="monedaElegida" ></span> desea invertir en <span class="criptoElegido"  id ="criptoElegido4">cripto</span>
+    <input type="number" id="elegirCantidadMoneda">
     <br>
     <div class="oculto2">
-
-        <span id="cantidadElegida"></span> <span id ="criptoElegido2"></span> equivale a <span id="valor2">
-        </span>
+        <span class="cantidadElegida"></span> <span class="criptoElegido"  ></span> equivale a <span class="valorConversionTotal"></span><span class="monedaElegida"></span>s
+    </div>
+    <button id="comprar">Comprar</button>
     </div>
     <br>
-    cuántas cripto desea comprar?
-    <input type="number" id="cantidad">
-    <br>
-    <button id="comprar">Cromprar</button>
+
+    
 </section>
 <fieldset>
     <legend>Mis Historial de compras</legend>
@@ -94,23 +95,35 @@ Nuevos precios
     </table>
     <button id="vender">vender</button>
 
-<table>
-    <thead>
-        <tr>
-            <th colspan="2">
-                ganacias
-            </th>
-            <th colspan="2">
-                pérdidas
-            </th>
-        </tr>
-    </thead>
-    <tbody id="tbody3">
-
-
-    </tbody>
-</table>
-
+<div class="tables">
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2">
+                    ganacias
+                </th>
+            </tr>
+        </thead>
+        <tbody id="tbody3g">
+    
+    
+        </tbody>
+    </table>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2">
+                    pérdidas
+                </th>
+            </tr>
+        </thead>
+        <tbody id="tbody3p">
+    
+    
+        </tbody>
+    </table>
+    
+</div>
       <!--   <b>
              BTC a
         </b>

@@ -41,3 +41,7 @@ h1{
 table, td, th, tr{
     border:solid 1px
 }
+
+.tables{
+    display: flex;
+}
