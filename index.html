@@ -1,14 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="./js/main.js" defer></script>
-    <link rel="stylesheet" href="./css/styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campers</title>
+  <link rel="icon" type="images/png" href="/images/logo campus-ai.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/profesores.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,800;1,400&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
+  <div class="d-flex " style="width: 20%;">
+    <div id="div2">
+      <!-- menu -->
+      <div class="">
+        <a class="navbar-brand " href="/1PaginaCampus.html">
+          
+          <img src="img/logoWhite.png" alt="Bootstrap" width="52" height="44" class="mb-5 imagenLogo"> 
+        </a>
+        <ul class="navbar-nav  mb-2 mb-lg-0 d-flex justify-content-start ">
+          <li class="nav-item  d-flex gap-3 " style="display:flex; align-items: center;">
+            <i class="bi bi-person-square text-white"></i>
+            <a class="nav-link active texcolor3" aria-current="page" href="index.html" style="cursor:pointer;">List Campers</a>
+          </li>
+          <li class="nav-item  d-flex gap-3 " style="display:flex; align-items: center;">
+            <i class="bi bi-journal-plus text-white"></i>
+            <a class="nav-link texcolor3" type="submit" data-bs-toggle="modal"
+            data-bs-target="#registerCamper" href="#" style="cursor:pointer;">Create Camper</a>
+          </li>
+         <!--  <div class="d-flex">
+            <button class="btn btn-outline-warning headerr" type="submit" data-bs-toggle="modal"
+              data-bs-target="#registerCamper">iniciar sesión</button>
+          </div> -->
+
+          <li class="nav-item dropdown" style="cursor:pointer;">
+
+          </li>
+         <!--  <li class="nav-item d-flex gap-3 " style="display:flex; align-items: center;">
+            <i class="bi bi-person-video3 text-white "></i>
+            <a class="nav-link disabled texcolor3" style="cursor:pointer;">Eventos</a>
+          </li> -->
+        </ul>
+      </div>
+
+      <!-- menu -->
+      <!--------  Menu Options --------->
+
+      <!-- <div class="d-flex">
+        <a href="" class="d-flex">
+          <table>
+            <tr>
+              <td><i class="bi bi-pencil-square text-danger"></i>
+              </td>
+              <td>
+                <h6 class="text-center pt-2 ps-2 texcolor3 fw-semibold" style="cursor:pointer">Crear parcial</h6>
+              </td>
+            </tr>
+          </table>
+        </a>
+      </div> -->
+
+     <!--  <div class="d-flex">
+        <a href="" class="d-flex">
+          <table>
+            <tr>
+              <td><i class="bi bi-bookmark-plus text-warning"></i>
+              </td>
+              <td>
+                <h6 class="text-center pt-2 ps-2 texcolor3 fw-semibold" style="cursor:pointer">Destacados</h6>
+              </td>
+            </tr>
+          </table>
+        </a>
+      </div> -->
+    </div>
+  </div>
+
+<!-- Modal -->
+<div class="modal fade" id="registerCamper" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header color1">
+        <h1 class="modal-title fs-5 headerr" id="exampleModalLabel">Register New Camper</h1>
+      </div>
+      <div class="modal-body">
+        <form id="formulario" class="row g-3"  method="POST">
+          <div class="col-md-12">
+            <label for="nombre" class="form-label headerr">Nombre</label>
+            <input type="text" class="form-control" id="nombre">
+          </div> 
     
+    
+    
+           <div class="col-md-6">
+            <label for="promedio" class="form-label headerr">Promedio</label>
+            <select class="form-select" id="promedio">
+              <option value="">Seleccione Promedio</option>
+              <option value="3.0">3.0</option>
+              <option value="3.1">3.1</option>
+              <option value="3.2">3.2</option>
+              <option value="3.3">3.3</option>
+              <option value="3.4">3.4</option>
+              <option value="3.5">3.5</option>
+              <option value="3.6">3.6</option>
+              <option value="3.7">3.7</option>
+              <option value="3.8">3.8</option>
+              <option value="3.9">3.9</option>
+              <option value="4.0">4.0</option>
+              <option value="4.1">4.1</option>
+              <option value="4.2">4.2</option>
+              <option value="4.3">4.3</option>
+              <option value="4.4">4.4</option>
+              <option value="4.5">4.5</option>
+              <option value="4.6">4.6</option>
+              <option value="4.7">4.7</option>
+              <option value="4.8">4.8</option>
+              <option value="4.9">4.9</option>
+              <option value="5.0">5.0</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <label for="edad" class="form-label headerr">Edad</label>
+            <input type="number" class="form-control" id="edad">
+          </div>
+          <div class="col-md-4">
+            <label for="nivelIngles" class="form-label headerr">Nivel Ingles</label>
+            <select id="nivelIngles" class="form-select">
+              <option selected>Nivel Ingles</option>
+              <option value="beginner">Beginner</option>
+              <option value="middle">Middle</option>
+              <option value="advanced">Advanced</option>
+              <option></option>
+            </select>
+          </div>
+          <div class="col-md-8">
+            <label for="especialidad" class="form-label headerr">Especialidad</label>
+            <select class="form-select" id="especialidad">
+              <option value="">Seleccione Especialidad</option>
+              <option value="frontEnd">Front-End</option>
+              <option value="backEnd">Back-End</option>
+              <option value="fullStack">Full-Stack</option>
+            </select>
+          </div>
+    
+          <div class="col-md-4">
+            <label for="nivelCampus" class="form-label headerr">Nivel en Campus</label>
+            <select class="form-select" id="nivelCampus">
+              <option value="">Nivel Campus</option>
+              <option value="basico">Basico</option>
+              <option value="intermedio">Intermedio</option>
+              <option value="avanzado">Avanzado</option>
+            </select>
+          </div>
+          
+          <div class="col-12">
+            <label for="expertoTecnologia" class="form-label headerr">Experto en tecnologia</label>
+            <select class="form-select" id="expertoTecnologia">
+              <option value="">Seleccione Experto Tecnologia</option>
+              <option value="html">Html</option>
+              <option value="javascript">JavaScript</option>
+              <option value="node">Node Js</option>
+              <option value="mongo">Mongo DB</option>
+              <option value="php">Php</option>
+              <option value="vue">Vue</option>
+              <option value="asp">ASP.NET</option>
+            </select>
+          </div> 
+          
+      </div>
+      <div class="modal-footer ">
+        <button type="button" class="btn btn-secondary color3 border3 headerr" data-bs-dismiss="modal">Cerrar</button>
+        <button type="submit" class="btn color5 color-heder headerr" data-bs-toggle="modal"
+          data-bs-target="#exampleModal2">Enviar Registro</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- //////////////////////////////////////Campers Dynamic Table-->
+  <div  class="div||||2 alertaAlerta" style="background-color: #233249;">
+    <div class="sub-menu d-flex justify-content-between menu-cuenta " >
+
+      <div class="divcueta border-bottom ">
+        <img src="img/trainerVermen.jpg" alt="" srcset="" class="cuenta2">
+        <div class="ps-2">
+          <h5 class="texcolor3">Vermen Ayala</h5>
+          <h6 class="texcosize">Trainer</h6>
+        </div>
+      </div>
+      <div class="align-items-center d-flex gap-3 margin-rigth">
+        <a href=""><i class="bi bi-envelope text-white" style="font-size: 1.5rem; cursor:pointer "></i></a>
+        <a href=""><i class="bi bi-bell text-white " style="font-size: 1.5rem; cursor:pointer "></i></a>
+        <a href=""><i class="bi bi-person-square text-white" style="font-size: 1.5rem; cursor:pointer "></i></a>
+      </div>
+    </div>
+    
+        <!-- DINAMYC TABLE -->
+        <div id="div3" class="conta">
+          <table class="table">
+            <thead class="menu-busqueda">
+                  <tr>
+                      <th scope="col">ID</th>
+                      <th scope="col">AVATAR</th>
+                      <th scope="col">NOMBRES</th>
+                      <th scope="col">PROMEDIO</th>
+                      <th scope="col">ESPECIALIDAD</th>
+                      <th scope="col">EXPERTO</th>
+                      <th scope="col">DETALLES</th>
+                  </tr>
+            </thead>
+                  <tbody class="table-group-divider" id="tbody">
+                  
+          
+                  
+                  </tbody>
+          </table>
+        </div>
+        <footer class="w- d-flex align-items justify-content-center">
+          <p class="fs-5 px-2 pt-2">Designed and made by Campers Maicol y Marcela</p>
+        </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+    crossorigin="anonymous"></script>
+   <script src="./js/app.js" type="module"></script>
+   <script src="./js/newCamper.js" type="module"></script> 
+  
+  
+
 </body>
+
 </html>
