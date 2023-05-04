@@ -15,20 +15,6 @@
       "id": 1
     },
     {
-      "imagen": "../img/camper-anonimo2.jpg",
-      "nombre": "Angela Gomez Lizarazo",
-      "edad": 20,
-      "promedio": 4,
-      "nivelCAmpus": "intermedio",
-      "nivelIngles": "middle",
-      "especialidad": "backEnd",
-      "expertoTecnologia": "javascript",
-      "detalle": "Creador de paginas web",
-      "direccion": "Calle 5 # 28-35",
-      "celular": 3154317110,
-      "id": 2
-    },
-    {
       "imagen": "../img/camiloC.jpg",
       "nombre": "Camilo Andres Caballero",
       "edad": 22,
@@ -421,6 +407,7 @@
       "id": 30
     },
     {
+      "imagen": "../img/camper-anonimo1.jpg",
       "nombre": "Luis Felipe Rueda García",
       "promedio": "3.7",
       "edad": "6",

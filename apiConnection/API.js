@@ -1,4 +1,4 @@
-const url = "http://localhost:4000/campers"
+const url = "http://localhost:4001/campers"
 
 // Obtener todos los Campers de la API (GET) Método HTTP
 
@@ -26,5 +26,16 @@ export let newCamper = async (camper) => {
 window.location.href ="index.html"
     }catch (error) {
         console.log(error)
+    }
+}
+
+//eliminar camper - Método HTTP (DELETE)
+export const deleteCamper = async (id)=>{
+    try {
+        result = await fetch(`${url}/${id}`,{
+            method: "DELETE"
+        })
+    } catch (error) {
+        console.log(error);
     }
 }
