@@ -1,263 +1,291 @@
 {
-    "clientes": [
+  "clientes": [
+    {
+      "id": 1,
+      "nombre": "Juan",
+      "apellido": "Pérez",
+      "telefono": "555-1234",
+      "correo": "juan@example.com",
+      "mascotas": [
         {
-          "nombre": "Juan",
-          "apellido": "Pérez",
-          "telefono": "555-1234",
-          "correo": "juan@example.com",
-          "PropietarioId": 1,
-          "mascotas": [
-            {
-              "id": 1,
-              "nombre": "Luna",
-              "tipo": "Perro",
-              "raza": "Labrador",
-              "edad": 3,
-              "notas": "Luna es una perra muy juguetona y le encanta correr en el parque."
-            }
-          ]
-        },
+          "id": 1,
+          "nombre": "Luna",
+          "tipo": "Perro",
+          "raza": "Labrador",
+          "edad": 3,
+          "notas": "Luna es una perra muy juguetona y le encanta correr en el parque."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "Ana",
+      "apellido": "González",
+      "telefono": "555-5678",
+      "correo": "ana@example.com",
+      "mascotas": [
         {
-          "nombre": "Ana",
-          "apellido": "González",
-          "telefono": "555-5678",
-          "correo": "ana@example.com",
-          "PropietarioId": 2,
-          "mascotas": [
-            {
-              "id": 2,
-              "nombre": "Mittens",
-              "tipo": "Gato",
-              "raza": "Siamés",
-              "edad": 5,
-              "notas": "Mittens es muy cariñoso, pero no le gusta que lo bañen."
-            }
-          ]
-        },
+          "id": 2,
+          "nombre": "Mittens",
+          "tipo": "Gato",
+          "raza": "Siamés",
+          "edad": 5,
+          "notas": "Mittens es muy cariñoso, pero no le gusta que lo bañen."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "Carlos",
+      "apellido": "Martínez",
+      "telefono": "555-9012",
+      "correo": "carlos@example.com",
+      "mascotas": [
         {
-          "nombre": "Carlos",
-          "apellido": "Martínez",
-          "telefono": "555-9012",
-          "correo": "carlos@example.com",
-          "PropietarioId": 3,
-          "mascotas": [
-            {
-              "id": 3,
-              "nombre": "Rocky",
-              "tipo": "Perro",
-              "raza": "Bulldog",
-              "edad": 2,
-              "notas": "Rocky es un perro muy leal y siempre está contento."
-            }
-          ]
-        },
+          "id": 3,
+          "nombre": "Rocky",
+          "tipo": "Perro",
+          "raza": "Bulldog",
+          "edad": 2,
+          "notas": "Rocky es un perro muy leal y siempre está contento."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nombre": "Laura",
+      "apellido": "García",
+      "telefono": "555-3456",
+      "correo": "laura@example.com",
+      "mascotas": [
         {
-          "nombre": "Laura",
-          "apellido": "García",
-          "telefono": "555-3456",
-          "correo": "laura@example.com",
-          "PropietarioId": 4,
-          "mascotas": [
-            {
-              "id": 4,
-              "nombre": "Mimi",
-              "tipo": "Gato",
-              "raza": "Persa",
-              "edad": 1,
-              "notas": "Mimi es muy tranquila y le encanta dormir en su almohada."
-            }
-          ]
-        },
+          "id": 4,
+          "nombre": "Mimi",
+          "tipo": "Gato",
+          "raza": "Persa",
+          "edad": 1,
+          "notas": "Mimi es muy tranquila y le encanta dormir en su almohada."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "nombre": "Jorge",
+      "apellido": "Hernández",
+      "telefono": "555-7890",
+      "correo": "jorge@example.com",
+      "mascotas": [
         {
-          "nombre": "Jorge",
-          "apellido": "Hernández",
-          "telefono": "555-7890",
-          "correo": "jorge@example.com",
-          "PropietarioId": 5,
-          "mascotas": [
-            {
-              "id": 5,
-              "nombre": "Charlie",
-              "tipo": "Perro",
-              "raza": "Poodle",
-              "edad": 4,
-              "notas": "Charlie es muy inteligente y siempre está aprendiendo trucos nuevos."
-            }
-          ]
+          "id": 5,
+          "nombre": "Charlie",
+          "tipo": "Perro",
+          "raza": "Poodle",
+          "edad": 4,
+          "notas": "Charlie es muy inteligente y siempre está aprendiendo trucos nuevos."
+        }
+      ]
+    },
+    {
+      "nombre": "Luis Felipe",
+      "apellido": " Rueda García",
+      "telefono": "3145768618",
+      "correo": "lfxrg0724@gmail.com",
+      "mascotas": [
+        {
+          "nombre": "Len",
+          "tipo": "Gato",
+          "raza": "Amarillo",
+          "edad": "12",
+          "notas": "no"
         }
       ],
-    "juguetes": [
+      "id": 6
+    },
+    {
+      "nombre": "yisus",
+      "apellido": "martinez",
+      "telefono": "1",
+      "correo": "1@g.com",
+      "mascotas": [
         {
-            "id": 1,
-            "nombre": "Pelota de tenis",
-            "tipo": "Bola",
-            "descripcion": "Una pelota de tenis amarilla para jugar con perros",
-            "precio": 2.99
-          },
-          {
-            "id": 2,
-            "nombre": "Ratón de juguete",
-            "tipo": "Peluche",
-            "descripcion": "Un juguete de peluche en forma de ratón para gatos",
-            "precio": 3.99
-          },
-          {
-            "id": 3,
-            "nombre": "Juguete para masticar",
-            "tipo": "Juguete resistente",
-            "descripcion": "Un juguete para perros que resiste el masticado intenso",
-            "precio": 7.99
-          },
-          {
-            "id": 4,
-            "nombre": "Túnel para gatos",
-            "tipo": "Túnel de juego",
-            "descripcion": "Un túnel de tela para gatos para explorar y jugar",
-            "precio": 12.99
-          },
-          {
-            "id": 5,
-            "nombre": "Rompecabezas para perros",
-            "tipo": "Juguete interactivo",
-            "descripcion": "Un rompecabezas interactivo para perros que los ayuda a desarrollar habilidades mentales",
-            "precio": 16.99
-          }
-    ],
-    "veterinarios": [
+          "nombre": "sfdfdsfds",
+          "tipo": "Gato",
+          "raza": "Amarillo",
+          "edad": "5",
+          "notas": "si"
+        }
+      ],
+      "id": 7
+    }
+  ],
+  "juguetes": [
+    {
+      "id": 1,
+      "nombre": "Pelota de tenis",
+      "tipo": "Bola",
+      "descripcion": "Una pelota de tenis amarilla para jugar con perros",
+      "precio": 2.99
+    },
+    {
+      "id": 2,
+      "nombre": "Ratón de juguete",
+      "tipo": "Peluche",
+      "descripcion": "Un juguete de peluche en forma de ratón para gatos",
+      "precio": 3.99
+    },
+    {
+      "id": 3,
+      "nombre": "Juguete para masticar",
+      "tipo": "Juguete resistente",
+      "descripcion": "Un juguete para perros que resiste el masticado intenso",
+      "precio": 7.99
+    },
+    {
+      "id": 4,
+      "nombre": "Túnel para gatos",
+      "tipo": "Túnel de juego",
+      "descripcion": "Un túnel de tela para gatos para explorar y jugar",
+      "precio": 12.99
+    },
+    {
+      "id": 5,
+      "nombre": "Rompecabezas para perros",
+      "tipo": "Juguete interactivo",
+      "descripcion": "Un rompecabezas interactivo para perros que los ayuda a desarrollar habilidades mentales",
+      "precio": 16.99
+    }
+  ],
+  "veterinarios": [
+    {
+      "id": 1,
+      "nombre": "Dr. Juan Pérez",
+      "especialidad": "Cirugía",
+      "telefono": "555-4321",
+      "correo": "juan@example.com"
+    },
+    {
+      "id": 2,
+      "nombre": "Dra. Ana González",
+      "especialidad": "Oftalmología",
+      "telefono": "555-8765",
+      "correo": "ana@example.com"
+    }
+  ],
+  "servicios": [
+    {
+      "id": 1,
+      "nombre": "Vacunación",
+      "precio": 30
+    },
+    {
+      "id": 2,
+      "nombre": "Corte de uñas",
+      "precio": 15
+    },
+    {
+      "id": 3,
+      "nombre": "Limpieza de oídos",
+      "precio": 20
+    },
+    {
+      "id": 4,
+      "nombre": "Baño",
+      "precio": 25
+    },
+    {
+      "id": 5,
+      "nombre": "Corte de pelo",
+      "precio": 40
+    }
+  ],
+  "facturas": [
+    {
+      "id": 1,
+      "fecha": "2023-05-01",
+      "servicios": [
         {
-            "id": 1,
-            "nombre": "Dr. Juan Pérez",
-            "especialidad": "Cirugía",
-            "telefono": "555-4321",
-            "correo": "juan@example.com"
-          },
-          {
-            "id": 2,
-            "nombre": "Dra. Ana González",
-            "especialidad": "Oftalmología",
-            "telefono": "555-8765",
-            "correo": "ana@example.com"
-          }
-    ],
-    "servicios": [
+          "id": 1,
+          "nombre": "Vacunación",
+          "precio": 30
+        },
         {
-            "id": 1,
-            "nombre": "Vacunación",
-            "precio": 30.0
-          },
-          {
-            "id": 2,
-            "nombre": "Corte de uñas",
-            "precio": 15.0
-          },
-          {
-            "id": 3,
-            "nombre": "Limpieza de oídos",
-            "precio": 20.0
-          },
-          {
-            "id": 4,
-            "nombre": "Baño",
-            "precio": 25.0
-          },
-          {
-            "id": 5,
-            "nombre": "Corte de pelo",
-            "precio": 40.0
-          }
-    ],
-    "facturas": [
-      {
-        "id": 1,
-        "fecha": "2023-05-01",
-        "propietarioID": 1,
-        "servicios": [
-          {
-            "id": 1,
-            "nombre": "Vacunación",
-            "precio": 30.0
-          },
-          {
-            "id": 2,
-            "nombre": "Corte de uñas",
-            "precio": 15.0
-          }
-        ],
-        "total": 45.0
-      },
-      {
-        "id": 2,
-        "fecha": "2023-04-28",
-        "propietarioID": 2,
-        "servicios": [
-          {
-            "id": 1,
-            "nombre": "Vacunación",
-            "precio": 30.0
-          }
-        ],
-        "total": 30.0
-      },
-      {
-        "id": 3,
-        "fecha": "2023-05-02",
-        "propietarioID": 3,
-        "servicios": [
-          {
-            "id": 1,
-            "nombre": "Vacunación",
-            "precio": 30.0
-          },
-          {
-            "id": 3,
-            "nombre": "Limpieza de oídos",
-            "precio": 20.0
-          },
-          {
-            "id": 4,
-            "nombre": "Baño",
-            "precio": 25.0
-          }
-        ],
-        "juguetes": [
-          {
-            "id": 1,
-            "nombre": "Pelota de tenis",
-            "tipo": "Bola",
-            "descripcion": "Una pelota de tenis amarilla para jugar con perros",
-            "precio": 2.99
-          },
-          {
-            "id": 2,
-            "nombre": "Ratón de juguete",
-            "tipo": "Peluche",
-            "descripcion": "Un juguete de peluche en forma de ratón para gatos",
-            "precio": 3.99
-          }
-        ],
-        "total": 78.99
-      },
-      {
-        "id": 4,
-        "fecha": "2023-05-02",
-        "propietarioID": 2,
-        "servicios": [
-          {
-            "id": 5,
-            "nombre": "Corte de pelo",
-            "precio": 40.0
-          }
-        ],
-        "juguetes": [
-          {
-            "id": 4,
-            "nombre": "Túnel para gatos",
-            "tipo": "Túnel de juego",
-            "descripcion": "Un túnel de tela para gatos para explorar y jugar",
-            "precio": 12.99
-          }
-        ],
-        "total": 52.99
-      }
-    ]
-  }
+          "id": 2,
+          "nombre": "Corte de uñas",
+          "precio": 15
+        }
+      ],
+      "total": 45
+    },
+    {
+      "id": 2,
+      "fecha": "2023-04-28",
+      "servicios": [
+        {
+          "id": 1,
+          "nombre": "Vacunación",
+          "precio": 30
+        }
+      ],
+      "total": 30
+    },
+    {
+      "id": 3,
+      "fecha": "2023-05-02",
+      "servicios": [
+        {
+          "id": 1,
+          "nombre": "Vacunación",
+          "precio": 30
+        },
+        {
+          "id": 3,
+          "nombre": "Limpieza de oídos",
+          "precio": 20
+        },
+        {
+          "id": 4,
+          "nombre": "Baño",
+          "precio": 25
+        }
+      ],
+      "juguetes": [
+        {
+          "id": 1,
+          "nombre": "Pelota de tenis",
+          "tipo": "Bola",
+          "descripcion": "Una pelota de tenis amarilla para jugar con perros",
+          "precio": 2.99
+        },
+        {
+          "id": 2,
+          "nombre": "Ratón de juguete",
+          "tipo": "Peluche",
+          "descripcion": "Un juguete de peluche en forma de ratón para gatos",
+          "precio": 3.99
+        }
+      ],
+      "total": 78.99
+    },
+    {
+      "id": 4,
+      "fecha": "2023-05-02",
+      "servicios": [
+        {
+          "id": 5,
+          "nombre": "Corte de pelo",
+          "precio": 40
+        }
+      ],
+      "juguetes": [
+        {
+          "id": 4,
+          "nombre": "Túnel para gatos",
+          "tipo": "Túnel de juego",
+          "descripcion": "Un túnel de tela para gatos para explorar y jugar",
+          "precio": 12.99
+        }
+      ],
+      "total": 52.99
+    }
+  ]
+}

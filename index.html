@@ -14,7 +14,7 @@
     </header>
     <main>
         <h3>Nuestros Clietes</h3>
-        <table>
+        <table id="0">
             <thead>
                 <tr>
 
@@ -32,13 +32,13 @@
                     </th>
                 </tr>
             </thead>
-            <tbody id="tbodyClientes">
+            <tbody id="tbodyClientes" name="tbodyClientes">
 
             </tbody>
 
         </table>
 
-        <form id="NuevoCliente">
+        <form id="NuevoCliente" name="NuevoCliente">
                                 <!-- {
                         "nombre": "Juan",
                         "apellido": "Pérez",
@@ -58,31 +58,31 @@
                       }, -->
                 <h3>Datos cliente</h3>
             <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" placeholder="Ingresa el Nombre">
+            <input type="text" id="nombre" name="nombre" placeholder="Ingresa el Nombre">
             <br>
             <label for="apellido">Apellido</label>
-            <input type="text" id="apellido" placeholder="Ingresa el Apellido">
+            <input type="text" id="apellido" name="apellido" placeholder="Ingresa el Apellido">
             <br>
             <label for="telefono">telefono</label>
-            <input type="number" id="telefono" placeholder="Ingresa el telefono">
+            <input type="number" id="telefono" name="telefono" placeholder="Ingresa el telefono">
             <br>
             <label for="correo">Correo</label>
-            <input type="text" id="correo" placeholder="Ingresa el Correo">
+            <input type="text" id="correo" name="correo" placeholder="Ingresa el Correo">
             <h4>Datos Mascota</h4>
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" placeholder="Ingresa el Nombre">
+            <label for="nombreM">Nombre</label>
+            <input type="text" id="nombreM" name="nombreM" placeholder="Ingresa el Nombre">
             <br>
             <label for="tipo">tipo</label>
-            <input type="text" id="tipo" placeholder="Ingresa el tipo">
+            <input type="text" id="tipo" name="tipo" placeholder="Ingresa el tipo">
             <br>
             <label for="raza">raza</label>
-            <input type="text" id="raza" placeholder="Ingresa el raza">
+            <input type="text" id="raza" name="raza" placeholder="Ingresa el raza">
             <br>
             <label for="edad">edad</label>
-            <input type="number" id="edad" placeholder="Ingresa el edad">
+            <input type="number" id="edad" name="edad" placeholder="Ingresa el edad">
             <br>
             <label for="notas">notas</label>
-            <input type="text" id="notas" placeholder="Ingresa el notas">
+            <input type="text" id="notas" name="notas" placeholder="Ingresa el notas">
             <br>
             <input type="submit"/>
 
