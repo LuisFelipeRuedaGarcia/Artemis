@@ -1,3 +1,15 @@
 td, th{
     border: solid 1px blueviolet; 
 }
+.Clientes{
+    background-color: aquamarine;
+}
+.Juguetes{
+    background-color: aqua;
+}
+.Servicios{
+    background-color: dodgerblue;
+}
+.Facturas{
+    background-color: royalblue;
+}

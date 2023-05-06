@@ -13,80 +13,248 @@
         <h1>Veterinaria</h1>
     </header>
     <main>
-        <h3>Nuestros Clietes</h3>
-        <table id="0">
-            <thead>
-                <tr>
+        <section class="Clientes">
+            <h3>Nuestros Clietes</h3>
+            <table id="0">
+                <thead>
+                    <tr>
 
-                    <th>
-                        NOMBRE
-                    </th>
-                    <th>
-                        DATOS DE CONTACTO
-                    </th>
-                    <th>
-                        MASCOTA
-                    </th>
-                    <th>
-                        eliminar
-                    </th>
-                </tr>
-            </thead>
-            <tbody id="tbodyClientes" name="tbodyClientes">
+                        <th>
+                            NOMBRE
+                        </th>
+                        <th>
+                            DATOS DE CONTACTO
+                        </th>
+                        <th>
+                            MASCOTA
+                        </th>
+                        <th>
+                            eliminar
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="tbodyClientes" name="tbodyClientes">
 
-            </tbody>
+                </tbody>
 
-        </table>
+            </table>
+            <fieldset>
+                <legend>Agregar Cliente</legend>
+                <form id="NuevoCliente" name="NuevoCliente">
+                        <h3>Datos cliente</h3>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa el Nombre">
+                    <br>
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" name="apellido" placeholder="Ingresa el Apellido">
+                    <br>
+                    <label for="telefono">telefono</label>
+                    <input type="number" id="telefono" name="telefono" placeholder="Ingresa el telefono">
+                    <br>
+                    <label for="correo">Correo</label>
+                    <input type="text" id="correo" name="correo" placeholder="Ingresa el Correo">
+                    <h4>Datos Mascota</h4>
+                    <label for="nombreM">Nombre</label>
+                    <input type="text" id="nombreM" name="nombreM" placeholder="Ingresa el Nombre">
+                    <br>
+                    <label for="tipo">tipo</label>
+                    <input type="text" id="tipo" name="tipo" placeholder="Ingresa el tipo">
+                    <br>
+                    <label for="raza">raza</label>
+                    <input type="text" id="raza" name="raza" placeholder="Ingresa el raza">
+                    <br>
+                    <label for="edad">edad</label>
+                    <input type="number" id="edad" name="edad" placeholder="Ingresa el edad">
+                    <br>
+                    <label for="notas">notas</label>
+                    <input type="text" id="notas" name="notas" placeholder="Ingresa el notas">
+                    <br>
+                    <input type="submit"/>
+                </form>
+            </fieldset>
+        </section>
 
-        <form id="NuevoCliente" name="NuevoCliente">
-                                <!-- {
-                        "nombre": "Juan",
-                        "apellido": "Pérez",
-                        "telefono": "555-1234",
-                        "correo": "juan@example.com",
-                        "PropietarioId": 1,
-                        "mascotas": [
-                          {
-                            "id": 1,
-                            "nombre": "Luna",
-                            "tipo": "Perro",
-                            "raza": "Labrador",
-                            "edad": 3,
-                            "notas": "Luna es una perra muy juguetona y le encanta correr en el parque."
-                          }
-                        ]
-                      }, -->
-                <h3>Datos cliente</h3>
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Ingresa el Nombre">
-            <br>
-            <label for="apellido">Apellido</label>
-            <input type="text" id="apellido" name="apellido" placeholder="Ingresa el Apellido">
-            <br>
-            <label for="telefono">telefono</label>
-            <input type="number" id="telefono" name="telefono" placeholder="Ingresa el telefono">
-            <br>
-            <label for="correo">Correo</label>
-            <input type="text" id="correo" name="correo" placeholder="Ingresa el Correo">
-            <h4>Datos Mascota</h4>
-            <label for="nombreM">Nombre</label>
-            <input type="text" id="nombreM" name="nombreM" placeholder="Ingresa el Nombre">
-            <br>
-            <label for="tipo">tipo</label>
-            <input type="text" id="tipo" name="tipo" placeholder="Ingresa el tipo">
-            <br>
-            <label for="raza">raza</label>
-            <input type="text" id="raza" name="raza" placeholder="Ingresa el raza">
-            <br>
-            <label for="edad">edad</label>
-            <input type="number" id="edad" name="edad" placeholder="Ingresa el edad">
-            <br>
-            <label for="notas">notas</label>
-            <input type="text" id="notas" name="notas" placeholder="Ingresa el notas">
-            <br>
-            <input type="submit"/>
+        <section class="Juguetes">
+            <h3>Nuestros Juguetes</h3>
+            <table>
+                <thead>
+                    <tr>
 
-        </form>
+                        <th>
+                            Juguete
+                        </th>
+                        <th>
+                            img
+                        </th>
+                        <th>
+                            tipo
+                        </th>
+                        <th>
+                            descripción
+                        </th>
+                        <th>
+                            precio
+                        </th>
+                        <th>
+                            eliminar
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="tbodyJuguetes" name="tbodyJuguetes">
+
+                </tbody>
+            </table>
+            
+            <fieldset>
+                <legend>Agregar Juguete</legend>
+                <form id="NuevoJuguete" name="NuevoJuguete">
+                        <h3>Datos Juguete</h3>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa el Nombre">
+                    <br>
+                    <label for="tipo">tipo</label>
+                    <input type="text" id="tipo" name="tipo" placeholder="Ingresa el tipo">
+                    <br>
+                    <label for="descripcion">descripción</label>
+                    <input type="text" id="descripcion" name="descripcion" placeholder="Ingresa la descripción">
+                    <br>
+                    <br>
+                    <label for="precio">precio</label>
+                    <input type="number" id="precio" name="precio" placeholder="Ingresa el precio">
+                    <br>
+                    <label for="img">img</label>
+                    <input type="text" id="img" name="img" placeholder="Ingresa una url">
+                    <br>
+                    <input type="submit"/>
+                </form>
+            </fieldset>
+        </section>
+            <section class="Veterinarios">
+                <h3>Nuestros Veterinarios</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>
+                                Nombre
+                            </th>
+                            <th>
+                                Especialidad
+                            </th>
+                            <th>
+                                teléfono
+                            </th>
+                            <th>
+                                correo
+                            </th>
+                            <th>
+                                eliminar
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbodyVeterinarios" name="tbodyVeterinarios">
+
+                    </tbody>
+                </table>
+                <fieldset>
+                    <legend>Agregar Veterinario</legend>
+                    <form id="NuevoVeterinario" name="NuevoVeterinario">
+                            <h3>Datos Veterinario</h3>
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ingresa el Nombre">
+                        <br>
+                        <label for="especialidad">especialidad</label>
+                        <input type="text" id="especialidad" name="especialidad" placeholder="Ingresa la especialidad">
+                        <br>
+                        <label for="telefono">telefono</label>
+                        <input type="number" id="telefono" name="telefono" placeholder="Ingresa el telefono">
+                        <br>
+                        <label for="correo">correo</label>
+                        <input type="text" id="correo" name="correo" placeholder="Ingresa el correo">
+                        <br>
+                        <input type="submit"/>
+                    </form>
+                </fieldset>
+        </section>
+            <section class="Servicios">
+                <h3>Nuestros Servicios</h3>
+            <table>
+                <thead>
+                    <tr>
+
+                        <th>
+                            Servicio
+                        </th>
+                        <th>
+                            precio
+                        </th>
+                        <th>
+                            img
+                        </th>
+                        <th>
+                            eliminar
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="tbodyServicios" name="tbodyServicios">
+
+                </tbody>
+
+            </table>
+            <fieldset>
+                <legend>Agregar Servicio</legend>
+                <form id="NuevoServicio" name="NuevoServicio">
+                        <h3>Datos Servicio</h3>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa el Nombre">
+                    <br>
+                    <label for="precio">precio</label>
+                    <input type="number" id="precio" name="precio" placeholder="Ingresa el telefono">
+                    <br>
+                    <label for="img">img</label>
+                    <input type="text" id="img" name="img" placeholder="Ingresa el Correo">
+                    <br>
+                    <input type="submit"/>
+                </form>
+            </fieldset>
+        </section>
+        <section class="Facturas">
+            <h3>Nuestros Facturas</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            id
+                        </th>
+                        <th>
+                            Servicios
+                        </th>
+                        <th>
+                            Total
+                        </th>
+                        <th>
+                            eliminar
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="tbodyFacturas" name="tbodyFacturas">
+
+                </tbody>
+            </table>
+            <fieldset>
+                <legend>Agregar Factura</legend>
+                <form id="NuevaFactura" name="NuevoFactura">
+                        <h3>Datos Factura</h3>
+                        <div id="ServiciosCheck">
+                            <input type="checkbox" name="s" id="s"><label for="s">XD</label>
+                        </div>
+                        <select name="ServiciosSelect" id="ServiciosSelect">
+                            <option value="Seleccionar">Seleccionar</option>
+                        </select>
+                        <br>
+                        <input type="submit"/>
+                </form>
+            </fieldset>
+    </section>
     </main>
     
 </body>

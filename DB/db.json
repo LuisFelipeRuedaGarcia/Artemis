@@ -100,22 +100,6 @@
         }
       ],
       "id": 6
-    },
-    {
-      "nombre": "yisus",
-      "apellido": "martinez",
-      "telefono": "1",
-      "correo": "1@g.com",
-      "mascotas": [
-        {
-          "nombre": "sfdfdsfds",
-          "tipo": "Gato",
-          "raza": "Amarillo",
-          "edad": "5",
-          "notas": "si"
-        }
-      ],
-      "id": 7
     }
   ],
   "juguetes": [
